@@ -1,0 +1,24 @@
+:root {
+  --ncss-primary: #0095ff;
+  --ncss-primary-rgb: 0, 149, 255;
+  --ncss-body-light: #fff;
+  --ncss-body-light-secondary: #f6f6f6;
+  --ncss-body-dark: #111;
+  --ncss-body-dark-secondary: #191919;
+
+  --ncss-text-white: #fff;
+  --ncss-text-black: #000;
+}
+
+.body-light {
+  background: var(--ncss-body-light);
+}
+.body-light-secondary {
+  background: var(--ncss-body-light-secondary);
+}
+.body-dark {
+  background: var(--ncss-body-dark);
+}
+.body-dark-secondary {
+  background: var(--ncss-body-dark-secondary);
+}
