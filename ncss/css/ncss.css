@@ -83,4 +83,58 @@ body[data-theme=dark] {
   padding-right: calc(1.5rem * var(--ncss-container-padding));
   margin-right: auto;
   margin-left: auto;
+}
+
+nav.nav-1 {
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  padding: 16px 32px;
+  background: var(--ncss-body-light-secondary);
+  color: var(--ncss-text-black);
+}
+nav.nav-1 .cont {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav.nav-1 h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+nav.nav-1 .menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+}
+nav.nav-1 .menu a {
+  color: var(--ncss-text-black);
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  border: 2px solid transparent;
+}
+nav.nav-1 .menu a.active, nav.nav-1 .menu a:hover, nav.nav-1 .menu a:focus {
+  border-bottom-color: var(--ncss-primary);
+}
+@media (min-width: 768px) {
+  nav.nav-1 .menu {
+    display: flex;
+  }
+  nav.nav-1 .btn {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav.nav-1 .menu {
+    display: flex;
+  }
+  nav.nav-1 .btn {
+    display: none;
+  }
 }/*# sourceMappingURL=ncss.css.map */
