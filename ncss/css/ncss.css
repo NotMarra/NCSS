@@ -6,8 +6,14 @@
   --ncss-body-light-secondary: #f6f6f6;
   --ncss-body-dark: #111;
   --ncss-body-dark-secondary: #191919;
+  --ncss-border: #e0e0e0;
+  --ncss-border-rgb: 224, 224, 224;
+  --ncss-border-dark: #333;
+  --ncss-border-dark-rgb: 51, 51, 51;
   --ncss-text-white: #fff;
+  --ncss-text-white-secondary: #f6f6f6;
   --ncss-text-black: #000;
+  --ncss-text-black-secondary: #333;
 }
 
 .body-light {
@@ -85,56 +91,57 @@ body[data-theme=dark] {
   margin-left: auto;
 }
 
-nav.nav-1 {
-  width: 100%;
-  height: auto;
-  z-index: 99;
-  padding: 16px 32px;
-  background: var(--ncss-body-light-secondary);
-  color: var(--ncss-text-black);
-}
-nav.nav-1 .cont {
-  margin: 0 auto;
+body[data-style=flat] .navbar {
   display: flex;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  border-bottom: 1px solid var(--ncss-border);
   align-items: center;
-  justify-content: space-between;
 }
-nav.nav-1 h1 {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+body[data-style=flat] .navbar h1 {
+  margin: 10px 20px;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 500;
 }
-nav.nav-1 .menu {
-  display: none;
-  flex: 1 1 0%;
-  justify-content: flex-end;
-  margin: 0 -16px;
+body[data-style=flat] .navbar svg {
+  margin: 10px 20px;
+  width: 40px;
+  height: 40px;
 }
-nav.nav-1 .menu a {
-  color: var(--ncss-text-black);
-  margin: 0 16px;
-  font-weight: 600;
+body[data-style=flat] .navbar img {
+  margin: 10px 20px;
+  width: 40px;
+  height: 40px;
+}
+body[data-style=flat] .navbar .menu {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+body[data-style=flat] .navbar .menu.left {
+  margin-left: 20px;
+  margin-right: auto;
+}
+body[data-style=flat] .navbar .menu a {
+  margin: 0 10px;
   text-decoration: none;
-  transition: 0.4s;
-  border: 2px solid transparent;
+  color: var(--ncss-text-black-secondary);
+  transition: color 0.3s ease-in-out;
 }
-nav.nav-1 .menu a.active, nav.nav-1 .menu a:hover, nav.nav-1 .menu a:focus {
-  border-bottom-color: var(--ncss-primary);
+body[data-style=flat] .navbar .menu a:hover {
+  color: var(--ncss-text-black);
 }
-@media (min-width: 768px) {
-  nav.nav-1 .menu {
-    display: flex;
-  }
-  nav.nav-1 .btn {
-    display: none;
-  }
+body[data-style=flat][data-theme=dark] .navbar {
+  border-bottom: 1px solid var(--ncss-border-dark);
 }
-@media (max-width: 768px) {
-  nav.nav-1 .menu {
-    display: flex;
-  }
-  nav.nav-1 .btn {
-    display: none;
-  }
+body[data-style=flat][data-theme=dark] .navbar h1 {
+  color: var(--ncss-text-white);
+}
+body[data-style=flat][data-theme=dark] .navbar .menu a {
+  color: var(--ncss-text-white-secondary);
+}
+body[data-style=flat][data-theme=dark] .navbar .menu a:hover {
+  color: var(--ncss-text-white);
 }/*# sourceMappingURL=ncss.css.map */
