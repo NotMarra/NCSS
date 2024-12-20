@@ -11,7 +11,7 @@
   --ncss-border-dark: #333;
   --ncss-border-dark-rgb: 51, 51, 51;
   --ncss-text-white: #fff;
-  --ncss-text-white-secondary: #f6f6f6;
+  --ncss-text-white-secondary: #b2b2b2;
   --ncss-text-black: #000;
   --ncss-text-black-secondary: #333;
 }
@@ -131,7 +131,55 @@ body[data-style=flat] .navbar .menu a {
   transition: color 0.3s ease-in-out;
 }
 body[data-style=flat] .navbar .menu a:hover {
+  color: var(--ncss-text-black-secondary);
+}
+body[data-style=flat] .navbar .icon {
+  display: none;
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+body[data-style=flat] .navbar .icon:hover {
   color: var(--ncss-text-black);
+}
+@media screen and (max-width: 768px) {
+  body[data-style=flat] .navbar h1 {
+    margin: 10px 10px;
+    font-size: 1.5rem;
+  }
+  body[data-style=flat] .navbar svg {
+    margin: 10px 10px;
+    width: 30px;
+    height: 30px;
+  }
+  body[data-style=flat] .navbar img {
+    margin: 10px 10px;
+    width: 30px;
+    height: 30px;
+  }
+  body[data-style=flat] .navbar .menu {
+    position: absolute;
+    top: 50px;
+    left: -150%;
+    right: 0;
+    bottom: 0;
+    background-color: var(--ncss-bg);
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    transition: left 0.3s ease-in-out;
+  }
+  body[data-style=flat] .navbar .menu.open {
+    left: 0;
+  }
+  body[data-style=flat] .navbar .menu a {
+    margin: 0 5px;
+    font-size: 1.5rem;
+  }
+  body[data-style=flat] .navbar .icon.show {
+    display: block;
+  }
 }
 body[data-style=flat][data-theme=dark] .navbar {
   border-bottom: 1px solid var(--ncss-border-dark);
@@ -144,4 +192,24 @@ body[data-style=flat][data-theme=dark] .navbar .menu a {
 }
 body[data-style=flat][data-theme=dark] .navbar .menu a:hover {
   color: var(--ncss-text-white);
+}
+body[data-style=flat][data-theme=dark] .navbar .icon {
+  color: var(--ncss-text-white-secondary);
+}
+body[data-style=flat][data-theme=dark] .navbar .icon:hover {
+  color: var(--ncss-text-white);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline-block;
+  transition: fill 0.3s ease-in-out;
+  color: var(--ncss-text-white);
+}
+.icon[data-theme=dark] {
+  color: var(--ncss-text-black);
 }/*# sourceMappingURL=ncss.css.map */

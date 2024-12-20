@@ -1,0 +1,15 @@
+.icon {
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline-block;
+  transition: fill 0.3s ease-in-out;
+
+  color: var(--ncss-text-white);
+
+  &[data-theme="dark"] {
+    color: var(--ncss-text-black);
+  }
+}

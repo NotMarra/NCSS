@@ -43,8 +43,67 @@ body {
           transition: color 0.3s ease-in-out;
 
           &:hover {
-            color: var(--ncss-text-black);
+            color: var(--ncss-text-black-secondary);
           }
+        }
+      }
+
+      .icon {
+        display: none;
+        margin-left: auto;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--ncss-text-black);
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar {
+        h1 {
+          margin: 10px 10px;
+          font-size: 1.5rem;
+        }
+
+        svg {
+          margin: 10px 10px;
+          width: 30px;
+          height: 30px;
+        }
+
+        img {
+          margin: 10px 10px;
+          width: 30px;
+          height: 30px;
+        }
+
+        .menu {
+          position: absolute;
+          top: 50px;
+          left: -150%;
+          right: 0;
+          bottom: 0;
+          background-color: var(--ncss-bg);
+          flex-direction: column;
+          align-items: center;
+          padding: 50px 0;
+          transition: left 0.3s ease-in-out;
+
+          &.open {
+            left: 0;
+          }
+
+          a {
+            margin: 0 5px;
+            font-size: 1.5rem;
+          }
+        }
+
+        .icon.show {
+          display: block;
         }
       }
     }
@@ -58,6 +117,14 @@ body {
         }
 
         .menu a {
+          color: var(--ncss-text-white-secondary);
+
+          &:hover {
+            color: var(--ncss-text-white);
+          }
+        }
+
+        .icon {
           color: var(--ncss-text-white-secondary);
 
           &:hover {
